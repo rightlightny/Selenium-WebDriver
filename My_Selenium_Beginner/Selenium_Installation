@@ -1,0 +1,62 @@
+1. Create "webdriver"  folder on your C: drive
+2. Copy "webdriver" directory location and go to your "Environment variables"
+3. Add "webdriver" directory location to your system "Environment variables"
+- in your System variables click on Path -> Edit -> New -> add "webdriver" directory location click OK -> OK -> OK
+Optional step: - in your System variables add one more System Variable "webdriver.chrome.driver" with Variable value "C:\webdriver\chromedriver.exe"
+4. Download Chromedriver from https://sites.google.com/a/chromium.org/chromedriver/downloads
+- download x64 or x32 version for PC, or Mac32 version for Mac
+- fir Mav users place and unzip this file to thr folder: /usr/local/bin/ or /usr/bin/
+5. Save it to your "webdriver" directory
+6. Do the same for:
+- Edge: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+- Firefox: https://github.com/mozilla/geckodriver/releases
+- Safari: https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+- Opera: https://github.com/operasoftware/operachromiumdriver/releases
+
+(Please note, if you did download driver for any Browser, you also need to install this Browser too to your computer)
+- Chrome https://www.google.com/chrome/
+- Edge https://www.microsoft.com/en-us/edge
+- Firefox https://www.mozilla.org/en-US/firefox/new/
+- Opera https://www.opera.com/download
+
+7. Check if your Chromedriver works by open CMD and typing "chromedriver" and it should start server
+8. Press Ctrl+C to shut down this server
+9. Install Python3 on your computer
+10. Add Python to your system "Environment variables"
+- click "New"
+- add "PYTHON3_HOME" as variable name
+- add your Python installation folder location as "Variable value"
+11. Then go to your system "Environment variables", click edit PATH
+12. Add new: %PYTHON3_HOME%
+13. Add new: %PYTHON3_HOME%\Scripts
+14. Check your Python is works -> got to CMD -> type Python -> you should see Python version
+15. Type exit() to shut down Python
+16. Check your Python is works -> got to CMD -> type pip -> you should see pip help page
+- if pip is not working install pip: https://pip.pypa.io/en/latest/installing/
+17. Install Selenium:
+- go to CMD -> type pip3 install -U selenium
+- for MAC users: go to your Terminal an type: sudo pip install -U selenium
+18. Go to your PyCharm and create Selenium test file with following script:
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get("https://www.google.com")
+print(driver.title)
+print(driver.current_url)
+driver.quit()
+19. This script should print "Google"
+20. Congrats! Your SeleniumWebdriver works correctly!
+21. Install 'Unittest' module:
+- on PC from CMD (Admin mode) type: pip install unittest2
+- on MAC from Terminal type: sudo pip install unittest2
+- open your PyCharm, then click on "Terminal" logo at the lower left corner
+- type: pip install selenium
+- wait until it's installed
+- type: pip install unittest2
+- wait until it's installed
+- type: pip3 install selenium
+- wait until it's installed
+- type: pip3 install unittest2
+- wait until it's installed
+22. Run your unittest to check if it works
+
+-- more info for Mac users installation here: https://medium.com/technowriter/install-selenium-on-mac-os-x-94c7a216aeb0
